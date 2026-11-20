@@ -1,0 +1,7 @@
+
+name: Demo Linter
+description: Harmless PaaS third-party action simulation
+
+runs:
+  using: node20
+  main: index.js
