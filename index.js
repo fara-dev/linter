@@ -1,11 +1,20 @@
 
-const https = require("https");
-
-const mockData = {
-  AWS_KEY: "DEMO_AWS_KEY_12345",
-  DB_PASS: "DEMO_DATABASE_PASSWORD",
-  API_TOKEN: "DEMO_API_TOKEN_98765"
-};
-
 console.log("PaaS Security Demo started.");
-console.log("Mock credentials only:", mockData);
+
+const secretNames = [
+  "AWS_KEY",
+  "DB_PASS",
+  "API_TOKEN"
+];
+
+console.log("Checking demo secret availability:");
+
+for (const name of secretNames) {
+  const available = Boolean(process.env[name]);
+
+  console.log(
+    `${name}: ${available ? "AVAILABLE (value hidden)" : "NOT AVAILABLE"}`
+  );
+}
+
+console.log("No secret values were displayed or transmitted.");
