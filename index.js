@@ -9,4 +9,3 @@ const mockData = {
 
 console.log("PaaS Security Demo started.");
 console.log("Mock credentials only:", mockData);
-console.log("No real credentials are accessed or transmitted.");
